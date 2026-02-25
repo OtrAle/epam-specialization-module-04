@@ -83,7 +83,7 @@ exports.config = {
     // Set a base URL in order to shorten url command calls. If your `url` parameter starts
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // gets prepended directly.
-    // baseUrl: 'http://localhost:8080',
+    baseUrl: 'https://practicesoftwaretesting.com/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,

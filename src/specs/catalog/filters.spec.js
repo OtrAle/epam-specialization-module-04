@@ -1,11 +1,15 @@
 
 
 describe('Browse Products - Checkbox Filters', () => {
-    it('UC-11: should apply filter and reflect changes in the product grid', async () => {
+    
+    //Add a forEach
+    it(`UC-11: should update the product grid when the filter "${filterName}" is applied`, async () => {
 
     });
 
-    it('UC-12: should sync parent category with subcategories', async () => {
+
+    //Add a forEach
+    it(`UC-12: should sync selection for parent category "${parent}" and its subcategories`, async () => {
 
     });
 

@@ -1,1 +1,7 @@
-const { browser } = require("@wdio/globals");
+const Page = require('../../base.page');
+
+class Pagination extends Page {
+
+}
+
+module.exports = new Pagination();

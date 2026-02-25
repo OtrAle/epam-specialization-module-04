@@ -2,15 +2,26 @@
 
 describe('Browse products - Search Functionality', () => {
 
-   describe('Valid search', () => {
+        beforeEach(async () => {
+        //open catalog page
+
+        });
+
+   
         describe('Validation rules', () => {
-            it('UC-6: should filter products using valid search terms', async () => {
+            
+            // Add a forEach
+            it('UC-6: should filter products using ${description}: "${term}"`', async () => {
 
             });
-            it('UC-7: should accept search terms inside lenght limits', async () => {
+
+            // Add a forEach
+            it(`UC-7: should accept search term within length limits: "${term.length} chars"`, async () => {
 
             });
-            it('UC-8: should reject search terms outside length limits', async () => {
+
+            // Add a forEach
+            it(`UC-8: should reject search terms outside length limits: "${term.length} chars"`, async () => {
 
             });
         });
@@ -21,11 +32,11 @@ describe('Browse products - Search Functionality', () => {
 
             });
 
-             it('UC-10: should restore original product view when clearing search', async () => {
+             it('UC-10: should restore the full product list when clearing search', async () => {
 
             });
         });
 
-   }); 
+  
 
 });

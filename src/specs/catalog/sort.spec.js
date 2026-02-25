@@ -1,7 +1,9 @@
 
 
 describe ('Browse Products - Sorting Logic', ()=> {
-    it ('UC-3: should sort products according to selected criteria', async () => {
+    
+    // Add a forEach here
+    it (`UC-3: should sort products correctly by ${option}`, async () => {
 
     });
 });

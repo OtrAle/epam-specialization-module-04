@@ -1,5 +1,6 @@
 
-describe('Browse products - Search', () => {
+
+describe('Browse products - Search Functionality', () => {
 
    describe('Valid search', () => {
         describe('Validation rules', () => {

@@ -1,6 +1,6 @@
 
 
-describe ('Browse Products - Price Range', () => {
+describe ('Browse Products - Price Range Slider', () => {
     it('UC-4: should filter products within selected price range', async () => {
 
     });

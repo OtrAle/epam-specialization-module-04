@@ -34,6 +34,11 @@ class CatalogPage extends Page {
     get navbar() {
         return Navbar;
     }
+
+
+    async open() {
+        await super.open("/");
+    }
 }
 
 module.exports = new CatalogPage();

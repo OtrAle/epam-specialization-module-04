@@ -7,7 +7,7 @@ describe('Browse Products - Category Navigation', () => {
     });
     
     // Add a forEach
-    it(`UC-16: should filter products when selecting the "${category}" category from navigation`, async () => {
+    it(`UC-15: should filter products when selecting the "${category}" category from navigation`, async () => {
 
     });
 

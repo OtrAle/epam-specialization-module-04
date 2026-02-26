@@ -4,4 +4,4 @@ class Sort extends Page {
 
 }
 
-module.exports = new SVGComponentTransferFunctionElement();
+module.exports = new Sort();

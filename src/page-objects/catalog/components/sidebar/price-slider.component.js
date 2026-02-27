@@ -40,24 +40,11 @@ class PriceSlider extends Page {
         }
     }
 
-    async getDisplayedRange() {
-        const combined = $('.ngx-slider-combined');
-        const isCombined = (await combined.getCSSProperty('opacity')).value === '1';
 
-        if (isCombined) {
-            await browser.waitUntil(
-                async () => (await combined.getText()) !== '',
-                { timeout: 3000 }
-            );
-            
-            const text = await combined.getText();
-            const [min, max] = text.split(' - ').map(Number);
-            return { min, max };
-        }
-
+    async getRange() {
         const [min, max] = await Promise.all([
-            this.displayedMinPrice.getText(),
-            this.displayedMaxPrice.getText(),
+            this.getHandleValue(this.handleMin),
+            this.getHandleValue(this.handleMax),
         ]);
         
         return { min: Number(min), max: Number(max) };

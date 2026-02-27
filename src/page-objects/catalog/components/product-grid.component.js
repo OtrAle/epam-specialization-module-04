@@ -4,6 +4,7 @@ class ProductGrid extends Page {
 
     get container() { return $('div.container[data-test]'); }
     get productCards() { return $$('a.card[data-test^="product-"]'); }
+    get noResults() { return $('[data-test="no-results"]')}
 
     getProductName(card) {
         return card.$('[data-test="product-name"]');
@@ -20,6 +21,14 @@ class ProductGrid extends Page {
     getProductCO2(card) {
         return card.$('[data-test="co2-rating-badge"]');
     }
+
+    async getProductPrices() {
+    return await this.productCards.map(async (card) => {
+        const priceText = await this.getProductPrice(card).getText();
+        return Number(priceText.replace('$', ''));
+    });
+}
+
 
 }
 

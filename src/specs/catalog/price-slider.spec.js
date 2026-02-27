@@ -1,18 +1,21 @@
-
+const CatalogPage = require('../../page-objects/catalog/catalog.page');
+const { priceSliderScenarios } = require('../../data/test-data');
 
 describe ('Browse Products - Price Range Slider', () => {
 
     beforeEach(async () => {
-        //open catalog page
+        await CatalogPage.open();
     });
 
-    
-    // Add forEach here
-    it(`UC-3: should filter products between $${min} and $${max}`, async () => {
+    priceSliderScenarios.forEach(({scenario, min, max }) => {
+        it(`UC-3: should validate: ${scenario} to filter products between ${min} and ${max} `, async () => {
+            await CatalogPage.priceSlider.setSliderRange(min, max);
 
+        });
     });
 
     it('UC-4: should display a "no results" message for an empty price range', async () => {
-
+        await CatalogPage.priceSlider.setSliderRange(1, 3);
     });
+
 });

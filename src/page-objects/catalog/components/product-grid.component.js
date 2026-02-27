@@ -2,7 +2,7 @@ const Page = require('../../base.page');
 
 class ProductGrid extends Page {
 
-    get gridContainer() {
+    get container() {
         return $('div.container[data-test]'); 
     }
 

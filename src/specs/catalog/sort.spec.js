@@ -1,4 +1,4 @@
-
+const CatalogPage = require('../../page-objects/catalog/catalog.page');
 
 describe ('Browse Products - Sorting Logic', ()=> {
     

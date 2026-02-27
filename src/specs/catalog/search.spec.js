@@ -1,13 +1,11 @@
-
+const CatalogPage = require('../../page-objects/catalog/catalog.page');
 
 describe('Browse products - Search Functionality', () => {
 
         beforeEach(async () => {
-        //open catalog page
-
+            await CatalogPage.open();
         });
-
-   
+    
         describe('Validation rules', () => {
             
             // Add a forEach

@@ -39,8 +39,19 @@ class ProductGrid extends Page {
         const priceText = await this.getProductPrice(card).getText();
         return Number(priceText.replace('$', ''));
     });
-}
+    }
 
+   async getProductId(index = 0) {
+    const cards = await this.productCards;
+    return cards[index].getAttribute('data-test');
+    }
+
+    async waitUntilFirstProductChangesFrom(previousId) {
+    await browser.waitUntil(async () => {
+        const currentId = await this.getProductId();
+        return currentId !== previousId;
+    });
+}
 
 }
 

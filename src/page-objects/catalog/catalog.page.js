@@ -38,6 +38,7 @@ class CatalogPage extends Page {
 
     async open() {
         await super.open("/");
+        await this.grid.container.waitForDisplayed();
     }
 }
 

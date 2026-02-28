@@ -36,3 +36,28 @@ module.exports.sortOptions = [
    'co2_rating,asc',
    'co2_rating,desc'
 ];
+
+// UC-13 PAGINATION
+
+module.exports.paginationData =[
+    { 
+        scenario: 'Forward navigation', 
+        currentPage: 1, arrow: 'next', 
+        targetPage: 2 
+    },
+    { 
+        scenario: 'Forward navigation', 
+        currentPage: 3, arrow: 'next', 
+        targetPage: 4 
+    },
+    { 
+        scenario: 'Backward navigation', 
+        currentPage: 2, arrow: 'previous', 
+        targetPage: 1 
+    },
+    { 
+        scenario: 'Backward navigation', 
+        currentPage: 4, arrow: 'previous', 
+        targetPage: 3 
+    },
+];

@@ -13,8 +13,24 @@ class Pagination extends Page {
         return $('.page-item.active');
     }
 
+    get disabledButton() {
+        return $('.page-item.disabled');
+    }
+
+    get pageItems() {
+        return $$('.page-item');
+    }
+
     pageButton(number) {
         return $(`[aria-label="Page-${number}"]`);
+    }
+
+    async clickArrow(arrow) {
+        if (arrow === 'next') {
+            await this.nextButton.click();
+        } else {
+            await this.prevButton.click();
+        }
     }
 }
 

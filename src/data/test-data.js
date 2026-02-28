@@ -41,23 +41,15 @@ module.exports.sortOptions = [
 
 module.exports.paginationData =[
     { 
-        scenario: 'Forward navigation', 
-        currentPage: 1, arrow: 'next', 
+        scenario: 'Navigate forward from first page', 
+        currentPage: 1, 
+        arrow: 'next', 
         targetPage: 2 
     },
     { 
-        scenario: 'Forward navigation', 
-        currentPage: 3, arrow: 'next', 
+        scenario: 'Navigate backward from last page', 
+        currentPage: 5, 
+        arrow: 'previous', 
         targetPage: 4 
-    },
-    { 
-        scenario: 'Backward navigation', 
-        currentPage: 2, arrow: 'previous', 
-        targetPage: 1 
-    },
-    { 
-        scenario: 'Backward navigation', 
-        currentPage: 4, arrow: 'previous', 
-        targetPage: 3 
     },
 ];

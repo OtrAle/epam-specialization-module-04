@@ -26,3 +26,13 @@ module.exports.priceSliderScenarios = [
         max: 160 
     }
 ];
+
+// UC-2 SORT 
+module.exports.sortOptions = [
+   'name,asc',
+   'name,desc',
+   'price,desc',
+   'price,asc',
+   'co2_rating,asc',
+   'co2_rating,desc'
+];

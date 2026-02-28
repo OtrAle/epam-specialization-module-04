@@ -2,9 +2,21 @@ const Page = require('../../base.page');
 
 class ProductGrid extends Page {
 
-    get container() { return $('div.container[data-test]'); }
-    get productCards() { return $$('a.card[data-test^="product-"]'); }
-    get noResults() { return $('[data-test="no-results"]')}
+    get container() { 
+        return $('div.container[data-test]'); 
+    }
+    
+    get productCards() { 
+        return $$('a.card[data-test^="product-"]'); 
+    }
+
+    get noResults() { 
+        return $('[data-test="no-results"]')
+    }
+
+    get sortingCompleted() {
+        return $('[data-test="sorting_completed"]');
+    }
 
     getProductName(card) {
         return card.$('[data-test="product-name"]');

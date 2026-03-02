@@ -22,6 +22,10 @@ class ProductGrid extends Page {
         return $('[data-test="filter_completed"]');
     }
 
+    get pageTitle() {
+        return $('[data-test="page-title"]');
+    }
+
     getProductName(card) {
         return card.$('[data-test="product-name"]');
     }

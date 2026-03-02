@@ -18,6 +18,10 @@ class ProductGrid extends Page {
         return $('[data-test="sorting_completed"]');
     }
 
+    get filterCommpleted() {
+        return $('[data-test="filter_completed"]');
+    }
+
     getProductName(card) {
         return card.$('[data-test="product-name"]');
     }

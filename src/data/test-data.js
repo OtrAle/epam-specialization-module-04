@@ -53,3 +53,24 @@ module.exports.paginationData =[
         targetPage: 4 
     },
 ];
+
+module.exports.filters = [
+    'Hammer',
+    'ForgeFlex',
+    'ForgeFlex Tools',
+];
+
+module.exports.filterParents = [
+    {
+        parent: 'Hand Tools',
+        children: ['Hammer', 'Hand Saw', 'Wrench', 'Screwdriver', 'Pliers', 'Chisels', 'Measures']
+    },
+    {
+        parent: 'Power Tools',
+        children: ['Grinder', 'Sander', 'Saw', 'Drill']
+    },
+    {
+        parent: 'Other',
+        children: ['Tool Belts', 'Storage Solutions', 'Workbench', 'Safety Gear', 'Fasteners']
+    }
+];

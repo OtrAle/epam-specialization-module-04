@@ -2,8 +2,16 @@ const CatalogPage = require('../../page-objects/catalog/catalog.page');
 
 describe('Browse Products - Display Grid', () => {
        
-        it ('UC-1: should display each product with name, price, image, and CO2 rating', async () => {
+        beforeEach(async () => {
             await CatalogPage.open();
+            await browser.maximizeWindow();
+        });
+
+        afterEach(async () => {
+            await browser.deleteCookies()
+        });
+
+        it ('UC-1: should display each product with name, price, image, and CO2 rating', async () => {
             await expect(CatalogPage.grid.container).toBeDisplayed();
             await expect(CatalogPage.grid.productCards).toBeElementsArrayOfSize({ gte: 1 });
             for (const card of await CatalogPage.grid.productCards) {

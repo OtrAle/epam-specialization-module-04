@@ -5,6 +5,11 @@ describe ('Browse Products - Price Range Slider', () => {
 
     beforeEach(async () => {
         await CatalogPage.open();
+        await browser.maximizeWindow();
+    });
+
+    afterEach(async () => {
+        await browser.deleteCookies()
     });
 
     priceSliderScenarios.forEach(({scenario, min, max }) => {

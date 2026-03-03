@@ -5,6 +5,11 @@ describe('Browse Products - Category Navigation', () => {
 
     beforeEach(async () => {
         await CatalogPage.open();
+        await browser.maximizeWindow();
+    });
+
+    afterEach(async () => {
+        await browser.deleteCookies()
     });
     
     filterParents.forEach(({parent, children}) => {

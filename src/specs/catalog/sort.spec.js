@@ -2,8 +2,14 @@ const CatalogPage = require('../../page-objects/catalog/catalog.page');
 const {sortOptions} = require('../../data/test-data');
 
 describe ('Browse Products - Sorting Logic', ()=> {
+    
     beforeEach(async () => {
         await CatalogPage.open();
+        await browser.maximizeWindow();
+    });
+
+    afterEach(async () => {
+        await browser.deleteCookies()
     });
     
     sortOptions.forEach((option) => {

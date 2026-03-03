@@ -1,3 +1,6 @@
+const { merge } = require('mochawesome-merge')
+const marge = require('mochawesome-report-generator')
+
 exports.config = {
     //
     // ====================
@@ -126,7 +129,15 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: [
+        'spec',
+        ['mochawesome', {
+            outputDir: './results',
+            outputFileFormat: function (opts) {
+                return `wdio-${opts.cid}.json`
+            }
+            }]
+        ],
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -276,8 +287,24 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    // onComplete: function(exitCode, config, capabilities, results) {
-    // },
+
+    onComplete: async function () {
+        try {
+            const mergedReport = await merge({
+                files: ['./results/*.json']
+        })
+        
+        await marge.create(mergedReport, {
+            reportDir: './results',
+            reportFilename: 'report',
+            inline: true
+        })
+
+        console.log('HTML report generated correctly')
+        } catch (error) {
+            console.error('Error generating report:', error)
+        }
+    },
     /**
     * Gets executed when a refresh happens.
     * @param {string} oldSessionId session ID of the old session
@@ -297,4 +324,7 @@ exports.config = {
     */
     // afterAssertion: function(params) {
     // }
+
+    // Mochawesome reporter 
+   
 }

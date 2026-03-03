@@ -5,9 +5,14 @@ describe('Browse products - Search Functionality', () => {
 
     beforeEach(async () => {
         await CatalogPage.open();
+        await browser.maximizeWindow();
+    });
+
+    afterEach(async () => {
+        await browser.deleteCookies()
     });
     
-    describe('Validation rules', () => {
+    describe('Browse products - Search Functionality - Validation Rules', () => {
             
         searchTerms.forEach(({scenario, term}) => {
             it(`UC-5: should display products containing "${term}" to test "${scenario}"`, async () => {
@@ -42,7 +47,7 @@ describe('Browse products - Search Functionality', () => {
 
     });
 
-    describe('State management', () => {
+    describe('Browse products - Search Functionality - State Management', () => {
        
         it('UC-8: should reset active filters when performing a new search', async () => {
             await CatalogPage.filters.ecoFriendlyFilter.click();

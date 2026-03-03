@@ -5,6 +5,11 @@ describe('Browse Products - Pagination', () => {
    
     beforeEach(async () => {
         await CatalogPage.open();
+        await browser.maximizeWindow();
+    });
+
+    afterEach(async () => {
+        await browser.deleteCookies()
     });
         
     it('UC-12: should navigate directly to a specific page', async () => {

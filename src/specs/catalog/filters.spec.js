@@ -5,6 +5,11 @@ describe('Browse Products - Checkbox Filters', () => {
 
     beforeEach(async () => {
         await CatalogPage.open();
+        await browser.maximizeWindow();
+    });
+
+    afterEach(async () => {
+        await browser.deleteCookies()
     });
     
     filters.forEach((filterName) => {

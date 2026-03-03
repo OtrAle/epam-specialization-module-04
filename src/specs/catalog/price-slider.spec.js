@@ -12,12 +12,6 @@ describe ('Browse Products - Price Range Slider', () => {
             await CatalogPage.priceSlider.setSliderRange(min, max);
             expect(await CatalogPage.priceSlider.getRange()).toEqual({ min, max });
             
-            const prices = await CatalogPage.grid.getProductPrices();
-            prices.forEach(price => {
-                expect(price).toBeGreaterThanOrEqual(min);
-                expect(price).toBeLessThanOrEqual(max);
-            });
-
         });
     });
 

@@ -8,7 +8,7 @@ describe ('Browse Products - Price Range Slider', () => {
     });
 
     priceSliderScenarios.forEach(({scenario, min, max }) => {
-        it.only(`UC-3: should validate: ${scenario} to filter products between ${min} and ${max} `, async () => {
+        it(`UC-3: should validate: ${scenario} to filter products between ${min} and ${max} `, async () => {
             await CatalogPage.priceSlider.setSliderRange(min, max);
             expect(await CatalogPage.priceSlider.getRange()).toEqual({ min, max });
             

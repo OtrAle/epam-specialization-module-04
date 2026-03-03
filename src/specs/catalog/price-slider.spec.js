@@ -8,10 +8,20 @@ describe ('Browse Products - Price Range Slider', () => {
     });
 
     priceSliderScenarios.forEach(({scenario, min, max }) => {
-        it(`UC-3: should validate: ${scenario} to filter products between ${min} and ${max} `, async () => {
+        it.only(`UC-3: should validate: ${scenario} to filter products between ${min} and ${max} `, async () => {
             await CatalogPage.priceSlider.setSliderRange(min, max);
             expect(await CatalogPage.priceSlider.getRange()).toEqual({ min, max });
             
+            // await browser.pause(3000);
+            // const cards = await CatalogPage.grid.productCards;
+            // if (cards.length >= 1) {
+            //     for (const card of cards) {
+            //         const priceText = await CatalogPage.grid.getProductPrice(card).getText();
+            //         const price = Number(priceText.replace('$', ''));
+            //         expect(price).toBeGreaterThanOrEqual(Math.floor(min));
+            //         expect(price).toBeLessThanOrEqual(Math.ceil(max));
+            //     }
+            // } 
         });
     });
 

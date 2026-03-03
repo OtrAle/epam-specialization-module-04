@@ -8,6 +8,7 @@ This repository contains an End-to-End (E2E) automation suite focused on testing
 - **Component-based architecture:** Each UI section (filters, search, sort, price slider, pagination) has its own dedicated component class.
 - **Centralized test data:** Multi-scenario test inputs are managed in test-data.js, enabling forEach iteration over data sets for cases like search terms, filter combinations, and pagination scenarios.
 - **Comprehensive catalog coverage:** Validates product display, sorting, filtering, search, pagination, price range, and category navigation.
+- **Mochawesome HTML Reports:** An HTML report is automatically generated in the /results folder after each test run, providing a visual summary of passed and failed tests.
 
 ## Requirements
 
@@ -40,7 +41,7 @@ Run from the project root directory:
 | `/page-objects/` | Page Objects for selectors and browse products related actions. |
 | `/config/wdio.conf.js` | WebdriverIO configuration file. |
 | `package.json` | Dependencies and npm scripts. |
-| `results` | Created when running test, contains HTML report and JSON files |
+| `results` | Created when running test, contains HTML report and JSON files. |
 
 ##  Test Scenarios Covered
 

@@ -43,20 +43,20 @@ Run from the project root directory:
 
 ##  Test Scenarios Covered
 
-✅ UC-1 GRID: Displaying the product grid shows product name, price, image, and CO₂ rating for each product.
-✅ UC-2 SORT: Selecting a sort option reorders the product grid according to the selected criteria.
-✅ UC-3 PRICE RANGE: Adjusting the price range slider filters the product grid to show products within the selected range.
-✅ UC-5 SEARCH: Entering a valid search term displays matching products in the grid.
-✅ UC-6 SEARCH: The search input enforces minimum and maximum character length boundaries.
-✅ UC-7 SEARCH: Entering a search term outside the allowed length boundaries does not trigger a search.
-✅ UC-8 SEARCH: Performing a new search resets any previously applied filters.
-✅ UC-9 SEARCH: Clearing the search input restores the default product grid state.
-✅ UC-10 FILTERS: Selecting checkbox filters updates the product grid accordingly.
-✅ UC-11 FILTERS: Selecting a parent category checkbox automatically selects its child categories.
-✅ UC-12 PAGINATION: Clicking a page number navigates directly to the corresponding page.
-✅ UC-13 PAGINATION: Clicking the pagination arrow buttons navigates to the next or previous page.
-✅ UC-14 PAGINATION: Pagination arrow buttons are disabled when the first or last page is reached.
-✅ UC-15 CATEGORIES: Navigating to a category from the navbar updates both the sidebar filters and the product grid.
+- ✅ UC-1 GRID: Displaying the product grid shows product name, price, image, and CO₂ rating for each product.
+- ✅ UC-2 SORT: Selecting a sort option reorders the product grid according to the selected criteria.
+- ✅ UC-3 PRICE RANGE: Adjusting the price range slider filters the product grid to show products within the selected range.
+- ✅ UC-5 SEARCH: Entering a valid search term displays matching products in the grid.
+- ✅ UC-6 SEARCH: The search input enforces minimum and maximum character length boundaries.
+- ✅ UC-7 SEARCH: Entering a search term outside the allowed length boundaries does not trigger a search.
+- ✅ UC-8 SEARCH: Performing a new search resets any previously applied filters.
+- ✅ UC-9 SEARCH: Clearing the search input restores the default product grid state.
+- ✅ UC-10 FILTERS: Selecting checkbox filters updates the product grid accordingly.
+- ✅ UC-11 FILTERS: Selecting a parent category checkbox automatically selects its child categories.
+- ✅ UC-12 PAGINATION: Clicking a page number navigates directly to the corresponding page.
+- ✅ UC-13 PAGINATION: Clicking the pagination arrow buttons navigates to the next or previous page.
+- ✅ UC-14 PAGINATION: Pagination arrow buttons are disabled when the first or last page is reached.
+- ✅ UC-15 CATEGORIES: Navigating to a category from the navbar updates both the sidebar filters and the product grid.
 
 ## Author 
 

@@ -40,6 +40,7 @@ Run from the project root directory:
 | `/page-objects/` | Page Objects for selectors and browse products related actions. |
 | `/config/wdio.conf.js` | WebdriverIO configuration file. |
 | `package.json` | Dependencies and npm scripts. |
+| `results` | Created when running test, contains HTML report and JSON files |
 
 ##  Test Scenarios Covered
 

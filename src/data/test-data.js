@@ -1,4 +1,3 @@
-// UC-3 PRICE RANGE SLIDER
 module.exports.priceSliderScenarios = [
     { 
         scenario: 'Lower Boundary', 
@@ -27,7 +26,6 @@ module.exports.priceSliderScenarios = [
     }
 ];
 
-// UC-2 SORT 
 module.exports.sortOptions = [
    'name,asc',
    'name,desc',
@@ -36,8 +34,6 @@ module.exports.sortOptions = [
    'co2_rating,asc',
    'co2_rating,desc'
 ];
-
-// UC-13 PAGINATION
 
 module.exports.paginationData =[
     { 
@@ -56,8 +52,8 @@ module.exports.paginationData =[
 
 module.exports.filters = [
     'Hammer',
-    'ForgeFlex',
     'ForgeFlex Tools',
+    'Show only eco-friendly products',
 ];
 
 module.exports.filterParents = [
@@ -72,5 +68,70 @@ module.exports.filterParents = [
     {
         parent: 'Other',
         children: ['Tool Belts', 'Storage Solutions', 'Workbench', 'Safety Gear', 'Fasteners']
+    }
+];
+
+module.exports.searchTerms = [
+    { 
+        term: 'Hammer', 
+        scenario: 'Standard term - Title Case' 
+    },
+    { 
+        term: 'hammer', 
+        scenario: 'Case sensitivity - Lowercase' 
+    },
+    { 
+        term: 'HAMMER', 
+        scenario: 'Case sensitivity - Uppercase' 
+    },
+    { 
+        term: 'Combination Pliers', 
+        scenario: 'Multi-word term' 
+    },
+    { 
+        term: '12V', 
+        scenario: 'Alphanumeric term' 
+    },
+];
+
+
+module.exports.validLengthSearchTerms = [
+    { 
+        term: 'Saw', 
+        length: 3, 
+        scenario: 'Minimum lenght boundary' 
+    },
+    { 
+        term: 'Bolt', 
+        length: 4, 
+        scenario: 'Just above minimum lenght' 
+    },
+    { 
+        term: 'Adjustable Spanner', 
+        length: 19, 
+        scenario: 'Mid-range nominal lenght' 
+    },
+    { 
+        term: 'Small Bench Saw with 200mm Safety Blade', 
+        length: 39, 
+        scenario: 'Just below maximum lenght' 
+    },
+    { 
+        term: 'Small Bench Saw with 200mm Safety Blades', 
+        length: 40, 
+        scenario: 'Maximum lenght boundary' 
+    },
+];
+
+module.exports.invalidLengthSearchTerms = [
+    { 
+        term: 'Pl', 
+        length: 2, 
+        scenario: 'Just below minimum lenght' 
+    },
+    { 
+        term: 'Cordless Drill Combo Kit With 2 Batteries!', 
+        length: 41, 
+        scenario: 'Just above maximum lenght' 
     }
 ];

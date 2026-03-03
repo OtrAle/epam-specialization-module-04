@@ -17,16 +17,14 @@ describe('Browse Products - Checkbox Filters', () => {
     });
 
     filterParents.forEach(({parent, children}) => {
-        it.only(`UC-11: should auto-select all subcategories when "${parent}" is selected`, async () => {
+        it(`UC-11: should auto-select all subcategories when "${parent}" is selected`, async () => {
             await CatalogPage.filters.filterCheckbox(parent).click();
+            await CatalogPage.grid.filterCommpleted.waitForExist();
+            await expect(CatalogPage.grid.filterCommpleted).toExist();
             await expect(CatalogPage.filters.filterCheckbox(parent)).toBeChecked();
             for (const child of children) {
                 await expect(CatalogPage.filters.filterCheckbox(child)).toBeChecked();
-        }
-            await CatalogPage.grid.filterCommpleted.waitForExist();
-            await expect(CatalogPage.grid.filterCommpleted).toExist();
-
-
+            }
         });
     });
 });

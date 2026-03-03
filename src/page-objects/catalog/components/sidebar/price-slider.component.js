@@ -40,7 +40,6 @@ class PriceSlider extends Page {
         }
     }
 
-
     async getRange() {
         const [min, max] = await Promise.all([
             this.getHandleValue(this.handleMin),

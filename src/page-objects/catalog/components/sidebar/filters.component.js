@@ -8,6 +8,10 @@ class Filters extends Page {
     get visibleCheckboxes() {
         return $$('input.icheck[name="category_id"]');
     }
+
+    get ecoFriendlyFilter() {
+        return $('[data-test="eco-friendly-filter"]');
+    }
 }
 
 module.exports = new Filters();

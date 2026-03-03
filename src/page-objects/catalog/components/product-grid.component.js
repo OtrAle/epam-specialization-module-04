@@ -22,8 +22,16 @@ class ProductGrid extends Page {
         return $('[data-test="filter_completed"]');
     }
 
+    get searchCompleted() {
+        return $('[data-test="search_completed"]');
+    }
+
     get pageTitle() {
         return $('[data-test="page-title"]');
+    }
+
+    get searchCaption() {
+        return $('[data-test="search-term"]');
     }
 
     getProductName(card) {
@@ -42,18 +50,24 @@ class ProductGrid extends Page {
         return card.$('[data-test="co2-rating-badge"]');
     }
 
-   async getProductId(index = 0) {
-    const cards = await this.productCards;
-    return cards[index].getAttribute('data-test');
+    async getProductPrices() {
+        return await this.productCards.map(async (card) => {
+            const priceText = await this.getProductPrice(card).getText();
+            return Number(priceText.replace('$', ''));
+        });
+    }
+
+    async getProductId(index = 0) {
+        const cards = await this.productCards;
+        return cards[index].getAttribute('data-test');
     }
 
     async waitUntilFirstProductChangesFrom(previousId) {
-    await browser.waitUntil(async () => {
-        const currentId = await this.getProductId();
-        return currentId !== previousId;
-    });
-}
-
+        await browser.waitUntil(async () => {
+            const currentId = await this.getProductId();
+            return currentId !== previousId;
+        });
+    }
 }
 
 module.exports = new ProductGrid();

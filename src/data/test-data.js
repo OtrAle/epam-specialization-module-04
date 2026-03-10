@@ -99,27 +99,27 @@ module.exports.validLengthSearchTerms = [
     { 
         term: 'Saw', 
         length: 3, 
-        scenario: 'Minimum lenght boundary' 
+        scenario: 'Minimum length boundary' 
     },
     { 
         term: 'Bolt', 
         length: 4, 
-        scenario: 'Just above minimum lenght' 
+        scenario: 'Just above minimum length' 
     },
     { 
         term: 'Adjustable Spanner', 
         length: 19, 
-        scenario: 'Mid-range nominal lenght' 
+        scenario: 'Mid-range nominal length' 
     },
     { 
         term: 'Small Bench Saw with 200mm Safety Blade', 
         length: 39, 
-        scenario: 'Just below maximum lenght' 
+        scenario: 'Just below maximum length' 
     },
     { 
         term: 'Small Bench Saw with 200mm Safety Blades', 
         length: 40, 
-        scenario: 'Maximum lenght boundary' 
+        scenario: 'Maximum length boundary' 
     },
 ];
 
@@ -127,11 +127,11 @@ module.exports.invalidLengthSearchTerms = [
     { 
         term: 'Pl', 
         length: 2, 
-        scenario: 'Just below minimum lenght' 
+        scenario: 'Just below minimum length' 
     },
     { 
         term: 'Cordless Drill Combo Kit With 2 Batteries!', 
         length: 41, 
-        scenario: 'Just above maximum lenght' 
+        scenario: 'Just above maximum length' 
     }
 ];

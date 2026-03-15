@@ -1,7 +1,6 @@
 const Page = require('../../base.page');
 
 class ProductGrid extends Page {
-
     get container() { 
         return $('div.container[data-test]'); 
     }
@@ -18,7 +17,7 @@ class ProductGrid extends Page {
         return $('[data-test="sorting_completed"]');
     }
 
-    get filterCommpleted() {
+    get filterCompleted() {
         return $('[data-test="filter_completed"]');
     }
 
@@ -50,9 +49,9 @@ class ProductGrid extends Page {
         return card.$('[data-test="co2-rating-badge"]');
     }
 
-    async getProductId(index = 0) {
+   async getProductId(index = 0) {
         const cards = await this.productCards;
-        return cards[index].getAttribute('data-test');
+        return await cards[index].getAttribute('data-test');
     }
 
     async waitUntilFirstProductChangesFrom(previousId) {

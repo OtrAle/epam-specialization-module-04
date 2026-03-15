@@ -1,12 +1,14 @@
 const Page = require('../../../base.page');
 
 class PriceSlider extends Page {
+    get handleMin() { 
+        return $('.ngx-slider-pointer-min'); 
+    }
 
-    get handleMin() { return $('.ngx-slider-pointer-min'); }
-    get handleMax() { return $('.ngx-slider-pointer-max'); }
-    get displayedMinPrice() { return $('.ngx-slider-model-value'); }
-    get displayedMaxPrice() { return $('.ngx-slider-model-high'); }
-
+    get handleMax() { 
+        return $('.ngx-slider-pointer-max'); 
+    }
+   
     async setSliderRange(targetMin, targetMax) {
         const [minLeft, maxLeft, minValue, maxValue] = await Promise.all([
             this.getHandlePosition(this.handleMin),

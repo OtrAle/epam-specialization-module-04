@@ -22,7 +22,7 @@ describe('Browse Products - Pagination', () => {
     });
 
     paginationData.forEach(({scenario, currentPage, targetPage, arrow}) => {
-        it.only(`UC-13: should navigate from ${currentPage} to ${targetPage} with the ${arrow} button to test ${scenario}`, async () => {
+        it(`UC-13: should navigate from ${currentPage} to ${targetPage} with the ${arrow} button to test ${scenario}`, async () => {
             await CatalogPage.pagination.pageButton(currentPage).click();
             await expect(CatalogPage.pagination.activePage).toHaveText(String(currentPage));
             const firstCardBefore = await CatalogPage.grid.getProductId();
